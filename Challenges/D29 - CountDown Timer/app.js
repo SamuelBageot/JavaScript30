@@ -15,6 +15,7 @@ function start(time) {
         isRunning = true;
         countDown();
         intervId = setInterval(countDown, 1000);
+        calcBackTime(time);
     }
 }
 
@@ -41,6 +42,15 @@ function useCustomTime(e) {
 function useFactoryTime(e) {
     time = parseInt(e.target.getAttribute('data-time'));
     start(time);
+}
+
+function calcBackTime() {
+    let date = new Date();
+    date.setMinutes(date.getMinutes() + time/60);
+    const hours = date.getHours();
+    let min = date.getMinutes();
+    min < 10 ? min = '0' + min : min;
+    endTime.innerHTML = `Be Back At ${hours}:${min}`;
 }
 
 
