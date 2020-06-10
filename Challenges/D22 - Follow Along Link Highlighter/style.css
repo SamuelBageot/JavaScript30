@@ -1,0 +1,77 @@
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    box-sizing: border-box;
+    min-height: 100vh;
+    background: linear-gradient(45deg, hsla(340, 100%, 55%, 1) 0%, hsla(340, 100%, 55%, 0) 70%),
+                linear-gradient(135deg, hsla(225, 95%, 50%, 1) 10%, hsla(225, 95%, 50%, 0) 80%),
+                linear-gradient(225deg, hsla(140, 90%, 50%, 1) 10%, hsla(140, 90%, 50%, 0) 80%),
+                linear-gradient(315deg, hsla(35, 95%, 55%, 1) 100%, hsla(35, 95%, 55%, 0) 70%);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    margin: 10rem 0;
+}
+
+.nav {
+    margin-bottom: 10rem;
+}
+
+.nav_list {
+    list-style: none;
+    display: flex;
+    font-size: 2rem;
+}
+
+.nav_item {
+    margin: 0 2rem;
+}
+
+.content {
+    max-width: 27%;
+}
+
+.content_paragraph {
+    line-height: 4rem;
+    font-size: 2.2rem;
+}
+
+.content_paragraph:not(:last-of-type) {
+    margin-bottom: 2rem;
+}
+
+.highItem {
+    background-color: rgba(0, 0, 0, 0.055);
+    border-radius: 20px;
+    transition: all .5s;
+    padding: 0 4px;
+}
+
+.highItem:hover {
+    cursor: pointer;
+}
+
+.highLight {
+    position: absolute;
+    background-color: #fff;
+    border-radius: 50px;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .2s;
+}
